@@ -39,6 +39,7 @@ using AspNetCore.Identity.LiteDB.Models;
 using AspNetCore.Identity.LiteDB;
 using Miniblog.Core.Hubs;
 
+
 namespace Miniblog.Core
 {
     public class LanguageRouteConstraint : IRouteConstraint
@@ -173,6 +174,8 @@ namespace Miniblog.Core
             services.AddMvc()
                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
                .AddDataAnnotationsLocalization();
+            services.AddSingleton<ILiteDbContext, LiteDbContext>();
+           
 
             services.Configure<RequestLocalizationOptions>(options =>
             {

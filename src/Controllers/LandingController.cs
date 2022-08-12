@@ -1,5 +1,6 @@
-﻿namespace Miniblog.Core.Controllers
+namespace Miniblog.Core.Controllers
 {
+   
     using Microsoft.AspNetCore.Mvc;
 
     using System;
@@ -9,8 +10,10 @@
 
     public class LandingController : Controller
     {
+      
         public IActionResult Index()
         {
+            
             return View();
         }
     }

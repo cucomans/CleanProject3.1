@@ -34,7 +34,17 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('updateCount = ' + message);
         if (onlineCount) onlineCount.innerText = message ;
     };
+    let goldenIniCallBack = function (dic) {
+        if (!dic) return;
+        console.log(dic);
+        $.each(dic, function (key, value) {
+            $('#' +key).prop('checked', value);
+        });
+        //if (onlineCount) onlineCount.innerText = message;
+    };
     connection.on('updateCount', updateCountCallback);
+
+    connection.on('goldenIni', goldenIniCallBack);
 
     // Create a function that the hub can call to broadcast messages.
     connection.on('broadcastMessage', function (name, num, tipo, state) {

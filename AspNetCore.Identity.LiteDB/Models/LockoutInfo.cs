@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics.CodeAnalysis;
 using LiteDB;
 
@@ -17,4 +17,10 @@ namespace AspNetCore.Identity.LiteDB.Models
          Enabled == false &&
          AccessFailedCount == 0;
    }
+    [SuppressMessage("ReSharper", "UnusedMember.Global")]
+    public class Golden
+    {
+        public int Id  { get; internal set; }
+        public string Name  { get; internal set; }
+    }
 }
