@@ -1,0 +1,28 @@
+﻿* {
+    font-family: "Arial", cursive;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+body {
+    background: yellow;
+}
+
+[type="checkbox"] {
+    display: all;
+    width: 0.8em;
+    height: 0.8em;
+    border-color: red;
+    position: relative;
+    left: 5px;
+}
+
+input[type=checkbox] {
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+    transform: scale(2);
+    margin:5px; 
+}

@@ -8,7 +8,7 @@ namespace Miniblog.Core
 
         public PostListView ListView { get; set; } = PostListView.TitlesAndExcerpts;
 
-        public string Owner { get; set; } = "The Owner";
+        public string Owner { get; set; } = "The PAPER";
 
         public int PostsPerPage { get; set; } = 4;
     }

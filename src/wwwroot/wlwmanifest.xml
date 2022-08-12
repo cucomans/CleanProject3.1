@@ -20,11 +20,11 @@
     <fileUploadNameFormat>{FileName}</fileUploadNameFormat>
   </options>
   <weblog>
-    <ServiceName>MiniBlog.Core</ServiceName>
+    <ServiceName>URSS - PAPER</ServiceName>
     <imageUrl>img/icon16x16.png</imageUrl>
     <watermarkImageUrl>img/icon16x16.png</watermarkImageUrl>
-    <homepageLinkText>View your blog</homepageLinkText>
-    <adminLinkText>Manage your blog</adminLinkText>
+    <homepageLinkText></homepageLinkText>
+    <adminLinkText></adminLinkText>
     <adminUrl><![CDATA[{blog-homepage-url}/login/]]></adminUrl>
   </weblog>
 </manifest>

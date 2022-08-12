@@ -20,15 +20,15 @@ namespace Miniblog.Core.Controllers
 
     public class RobotsController : Controller
     {
-        private readonly IBlogService blog;
+        //private readonly IBlogService blog;
 
         private readonly WebManifest manifest;
 
         private readonly IOptionsSnapshot<BlogSettings> settings;
 
-        public RobotsController(IBlogService blog, IOptionsSnapshot<BlogSettings> settings, WebManifest manifest)
+        public RobotsController( IOptionsSnapshot<BlogSettings> settings, WebManifest manifest)
         {
-            this.blog = blog;
+           
             this.settings = settings;
             this.manifest = manifest;
         }
@@ -83,50 +83,7 @@ namespace Miniblog.Core.Controllers
             xml.WriteEndElement(); // rsd
         }
 
-        [Route("/feed/{type}")]
-        public async Task Rss(string type)
-        {
-            EnableHttpBodySyncIO();
-
-            this.Response.ContentType = "application/xml";
-            var host = $"{this.Request.Scheme}://{this.Request.Host}";
-
-            using var xmlWriter = XmlWriter.Create(
-                this.Response.Body,
-                new XmlWriterSettings() { Async = true, Indent = true, Encoding = new UTF8Encoding(false) });
-            var posts = this.blog.GetPosts(10);
-            var writer = await this.GetWriter(
-                type,
-                xmlWriter,
-                await posts.MaxAsync(p => p.PubDate)).ConfigureAwait(false);
-
-            await foreach (var post in posts)
-            {
-                var item = new AtomEntry
-                {
-                    Title = post.Title,
-                    Description = post.Content,
-                    Id = host + post.GetLink(),
-                    Published = post.PubDate,
-                    LastUpdated = post.LastModified,
-                    ContentType = "html",
-                };
-
-                foreach (var category in post.Categories)
-                {
-                    item.AddCategory(new SyndicationCategory(category));
-                }
-                foreach (var tag in post.Tags)
-                {
-                    item.AddCategory(new SyndicationCategory(tag));
-                }
-
-                item.AddContributor(new SyndicationPerson("test@example.com", this.settings.Value.Owner));
-                item.AddLink(new SyndicationLink(new Uri(item.Id)));
-
-                await writer.Write(item).ConfigureAwait(false);
-            }
-        }
+      
 
         [Route("/sitemap.xml")]
         public async Task SitemapXml()
@@ -141,17 +98,6 @@ namespace Miniblog.Core.Controllers
             xml.WriteStartDocument();
             xml.WriteStartElement("urlset", "http://www.sitemaps.org/schemas/sitemap/0.9");
 
-            var posts = this.blog.GetPosts(int.MaxValue);
-
-            await foreach (var post in posts)
-            {
-                var lastMod = new[] { post.PubDate, post.LastModified };
-
-                xml.WriteStartElement("url");
-                xml.WriteElementString("loc", host + post.GetLink());
-                xml.WriteElementString("lastmod", lastMod.Max().ToString("yyyy-MM-ddThh:mmzzz", CultureInfo.InvariantCulture));
-                xml.WriteEndElement();
-            }
 
             xml.WriteEndElement();
         }
