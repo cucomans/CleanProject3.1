@@ -417,7 +417,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 connection.invoke('send', name, num, tipo, state);
             });
            
-            });
+           
 
         })
         .catch(error => {
