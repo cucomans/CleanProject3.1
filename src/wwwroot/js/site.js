@@ -333,6 +333,92 @@ document.addEventListener('DOMContentLoaded', function () {
                 connection.invoke('send', name, num, tipo, state);
             });
 
+            //new
+            document.getElementById('satyro1').addEventListener('click', function (event) {
+                var state = $(this).prop('checked');
+                var num = $(this).data('number');
+                var tipo = $(this).data('tipo');
+                connection.invoke('send', name, num, tipo, state);
+            });
+            document.getElementById('satyro2').addEventListener('click', function (event) {
+                var state = $(this).prop('checked');
+                var num = $(this).data('number');
+                var tipo = $(this).data('tipo');
+                connection.invoke('send', name, num, tipo, state);
+            });
+            document.getElementById('satyro3').addEventListener('click', function (event) {
+                var state = $(this).prop('checked');
+                var num = $(this).data('number');
+                var tipo = $(this).data('tipo');
+                connection.invoke('send', name, num, tipo, state);
+            });
+
+            document.getElementById('twintale1').addEventListener('click', function (event) {
+                var state = $(this).prop('checked');
+                var num = $(this).data('number');
+                var tipo = $(this).data('tipo');
+                connection.invoke('send', name, num, tipo, state);
+            });
+            document.getElementById('twintale2').addEventListener('click', function (event) {
+                var state = $(this).prop('checked');
+                var num = $(this).data('number');
+                var tipo = $(this).data('tipo');
+                connection.invoke('send', name, num, tipo, state);
+            });
+            document.getElementById('twintale3').addEventListener('click', function (event) {
+                var state = $(this).prop('checked');
+                var num = $(this).data('number');
+                var tipo = $(this).data('tipo');
+                connection.invoke('send', name, num, tipo, state);
+            });
+
+            document.getElementById('napin1').addEventListener('click', function (event) {
+                var state = $(this).prop('checked');
+                var num = $(this).data('number');
+                var tipo = $(this).data('tipo');
+                connection.invoke('send', name, num, tipo, state);
+            });
+            document.getElementById('napin2').addEventListener('click', function (event) {
+                var state = $(this).prop('checked');
+                var num = $(this).data('number');
+                var tipo = $(this).data('tipo');
+                connection.invoke('send', name, num, tipo, state);
+            });
+            document.getElementById('napin3').addEventListener('click', function (event) {
+                var state = $(this).prop('checked');
+                var num = $(this).data('number');
+                var tipo = $(this).data('tipo');
+                connection.invoke('send', name, num, tipo, state);
+            });
+
+            document.getElementById('ironknight1').addEventListener('click', function (event) {
+                var state = $(this).prop('checked');
+                var num = $(this).data('number');
+                var tipo = $(this).data('tipo');
+                connection.invoke('send', name, num, tipo, state);
+            });
+            document.getElementById('ironknight2').addEventListener('click', function (event) {
+                var state = $(this).prop('checked');
+                var num = $(this).data('number');
+                var tipo = $(this).data('tipo');
+                connection.invoke('send', name, num, tipo, state);
+            });
+            document.getElementById('ironknight3').addEventListener('click', function (event) {
+                var state = $(this).prop('checked');
+                var num = $(this).data('number');
+                var tipo = $(this).data('tipo');
+                connection.invoke('send', name, num, tipo, state);
+            });
+
+            document.getElementById('ggd1').addEventListener('click', function (event) {
+                var state = $(this).prop('checked');
+                var num = $(this).data('number');
+                var tipo = $(this).data('tipo');
+                connection.invoke('send', name, num, tipo, state);
+            });
+           
+            });
+
         })
         .catch(error => {
             console.error(error.message);
