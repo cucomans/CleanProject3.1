@@ -29,62 +29,100 @@ namespace Miniblog.Core.Hubs
             {"budge1",false },
             {"budge2",false },
             {"budge3",false },
+            {"budge4",false },
+            {"budge5",false },
             //
              //
             {"goblin1",false },
             {"goblin2",false },
             {"goblin3",false },
+            {"goblin4",false },
+            {"goblin5",false },
             //
              //
             {"rabbit1",false },
             {"rabbit2",false },
             {"rabbit3",false },
+            {"rabbit4",false },
+            {"rabbit5",false },
             //
              //
             {"darkknight1",false },
             {"darkknight2",false },
             {"darkknight3",false },
+            {"darkknight4",false },
+            {"darkknight5",false },
             //
              //
             {"devil1",false },
             {"devil2",false },
             {"devil3",false },
+            {"devil4",false },
+            {"devil5",false },
 
              //
             {"soldier1",false },
             {"soldier2",false },
             {"soldier3",false },
+            {"soldier4",false },
+            {"soldier5",false },
             //
             {"titan1",false },
             {"titan2",false },
             {"titan3",false },
+            {"titan4",false },
+            {"titan5",false },
             //
             {"vepar1",false },
             {"vepar2",false },
             {"vepar3",false },
+            {"vepar4",false },
+            {"vepar5",false },
             //
             {"lizard1",false },
             {"lizard2",false },
             {"lizard3",false },
+            {"lizard4",false },
+            {"lizard5",false },
             //
             {"wheel1",false },
             {"wheel2",false },
             {"wheel3",false },
+            {"wheel4",false },
+            {"wheel5",false },
             //
             {"tantalo1",false },
             {"tantalo2",false },
             {"tantalo3",false },
+            {"tantalo4",false },
+            {"tantalo5",false },
             //
             {"golem1",false },
             {"golem2",false },
             {"golem3",false },
+            {"golem4",false },
+            {"golem5",false },
             //
-            {"crust1",false },
-            {"crust2",false },
-            {"crust3",false },
+            {"satyro1",false },
+            {"satyro2",false },
+            {"satyro3",false },
+            {"satyro4",false },
+            {"satyro5",false },
             //
-
-
+            {"twintale1",false },
+            {"twintale2",false },
+            {"twintale3",false },
+            {"twintale4",false },
+            //
+            {"napin1",false },
+            {"napin2",false },
+            {"napin3",false },
+            {"napin4",false },
+            //
+            {"ironknight1",false },
+            {"ironknight2",false },
+            {"ironknight3",false },
+            {"ironknight4",false },
         };
         
 
